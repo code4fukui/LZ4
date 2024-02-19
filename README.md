@@ -4,7 +4,7 @@ Lz4.js is an implementation of Lz4 designed to be used in web browsers and Deno.
 
 ## Usage
 ```js
-import LZ4 from "https://code4fukui.github.io/LZ4/LZ4.js";
+import { LZ4 } from "https://code4fukui.github.io/LZ4/LZ4.js";
 
 // Compress 128 bytes of zero.
 const compressed = LZ4.compress(new Uint8Array(128));
