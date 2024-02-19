@@ -1,4 +1,4 @@
-import LZ4 from "./lz4.js";
+import LZ4 from "./LZ4.js";
 
 const test = new Uint8Array([1, 2, 3, 4]);
 const bin = LZ4.compress(test);
