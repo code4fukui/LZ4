@@ -572,4 +572,4 @@ exports.compress = function compress (src, maxSize) {
   return dst;
 };
 
-export default exports;
+export const LZ4 = exports;

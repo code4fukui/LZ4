@@ -1,26 +1,16 @@
-# Lz4.js [![NPM version](https://badge.fury.io/js/lz4js.svg)](https://www.npmjs.com/package/lz4js) [![Build Status](https://travis-ci.org/Benzinga/lz4js.svg?branch=master)](https://travis-ci.org/Benzinga/lz4js) [![codecov](https://codecov.io/gh/Benzinga/lz4js/branch/master/graph/badge.svg)](https://codecov.io/gh/Benzinga/lz4js)
-Lz4.js is an implementation of Lz4 designed to be used in web browsers. It contains no dependencies on external libraries or Node.JS, though it is organized as a set of CommonJS modules. It is recommended to use Browserify or WebPack to bundle this for the web browser.
+# Lz4.js
 
-## Installation
-```
-npm install lz4js
-```
+Lz4.js is an implementation of Lz4 designed to be used in web browsers and Deno. It contains no dependencies on external libraries or Node.JS.
 
 ## Usage
-```javascript
-var lz4 = require("lz4js");
-var fs = require("fs");
+```js
+import LZ4 from "https://code4fukui.github.io/LZ4/LZ4.js";
 
 // Compress 128 bytes of zero.
-var compressed = lz4.compress(new Array(128));
+const compressed = LZ4.compress(new Uint8Array(128));
 
 // Decompress.
-var decompressed = lz4.decompress(compressed);
-
-// Compress file.bin to file.lz4.
-var data = fs.readFileSync("file.bin");
-compressed = Buffer.from(lz4.compress(data));
-fs.writeFileSync('file.lz4', compressed);
+const decompressed = LZ4.decompress(compressed);
 ```
 
 > **Note**: The high-level `compress` and `decompress` functions deal with framed Lz4 data and do not support raw block data nor legacy Lz4 blocks.
