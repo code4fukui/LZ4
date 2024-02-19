@@ -8,8 +8,8 @@
 // - HC support (better search algorithm)
 // - Tests/benchmarking
 
-var xxhash = require('./xxh32.js');
-var util = require('./util.js');
+import * as xxhash from './xxh32.js';
+import util from './util.js';
 
 // Constants
 // --
@@ -126,6 +126,7 @@ function sliceArray (array, start, end) {
 
 // Implementation
 // --
+const exports = {};
 
 // Calculates an upper bound for lz4 compression.
 exports.compressBound = function compressBound (n) {
@@ -570,3 +571,5 @@ exports.compress = function compress (src, maxSize) {
 
   return dst;
 };
+
+export default exports;

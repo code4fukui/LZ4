@@ -1,3 +1,5 @@
+const exports = {};
+
 // Simple hash function, from: http://burtleburtle.net/bob/hash/integer.html.
 // Chosen because it doesn't use multiply and achieves full avalanche.
 exports.hashU32 = function hashU32(a) {
@@ -52,3 +54,5 @@ exports.imul = function imul(a, b) {
 
     return al * bl + (ah * bl + al * bh << 16) | 0;
 };
+
+export default exports;
