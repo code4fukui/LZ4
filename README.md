@@ -1,5 +1,7 @@
 # LZ4.js
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 Lz4.js is an implementation of Lz4 designed to be used in web browsers and Deno. It contains no dependencies on external libraries or Node.JS.
 
 ## Usage
@@ -29,4 +31,4 @@ The API accepts either `Array`s or `Uint8Array`s. Arrays are expected to be arra
     Any unused buffer data will be sliced before the buffer is returned.
 
 ## License
-Not specified.
+The LZ4.js project is licensed under the ISC license.
